@@ -35,3 +35,40 @@ ACCESS_DENIED_BUY = You dont have a permission for buy this weapon!
 ALREADY_HAVE = You already have %s
 BUY_TIME_END = Buy %i seconds have passed. ^nYou can't buy anything now!
 BUY_COMMAND_USAGE = Check command usage: %s <NST Name>
+
+[tr]
+MENU_TITLE = NST Silahları [github.com/kruz1337]
+MENU_ITEM1 = Birincil Silahlar
+MENU_ITEM2 = İkincil Silahlar
+MENU_ITEM3 = Yakın Dövüş
+MENU_ITEM4 = El bombaları
+MENU_ITEM5 = Önceki Silahları Yeniden Satın Al
+MENU_ITEM6 = Otomatik Silah Satın Al %s
+
+ITEM_ENABLED = Etkin
+ITEM_DISABLED = Devre Dışı
+
+MENU2_ITEM1 = Av Tüfekleri
+MENU2_ITEM2 = Alt makine
+MENU2_ITEM3 = Keskin Nişancılar
+MENU2_ITEM4 = Tüfekler
+MENU2_ITEM5 = Makineli Tüfek
+
+MENU_NEXT = Sonraki
+MENU_BACK = Geri
+MENU_EXIT = Çıkış
+
+ACCESS_DENIED = İzniniz yok!
+USER_IS_DEAD = Bu komutu kullanmak için hayatta olmalısınız!
+
+AUTO_BUY_ENABLED = Otomatik Satın Alma Etkin!
+AUTO_BUY_DISABLED = Otomatik Satın Alma Devre Dışı!
+FILE_NOT_LOADED = Yapılandırma dosyası bulunamadı! (Yol=“%s”)
+BROKEN_CONFIG = Konfigürasyon dosyasında “%i” satırında “%s” hatası var!
+INSUFFICIENT_MONEY = Bu silahı satın almak için yeterli paranız yok!
+NOT_LIVE = Sadece hayattayken satın alabilirsiniz.
+CANT_BUY_WEAPON = Bu konumdan Silah satın alamazsınız.
+ACCESS_DENIED_BUY = Bu silahı satın almak için izniniz yok!
+ALREADY_HAVE = Zaten %s'ye sahipsiniz
+BUY_TIME_END = Satın al %i saniye geçti. ^nŞimdi hiçbir şey satın alamazsınız!
+BUY_COMMAND_USAGE = Komut kullanımını kontrol et: %s <NST Adı>

@@ -49,10 +49,10 @@ ITEM_ENABLED = Etkin
 ITEM_DISABLED = Devre Dışı
 
 MENU2_ITEM1 = Av Tüfekleri
-MENU2_ITEM2 = Alt makine
+MENU2_ITEM2 = Alt Makineler
 MENU2_ITEM3 = Keskin Nişancılar
 MENU2_ITEM4 = Tüfekler
-MENU2_ITEM5 = Makineli Tüfek
+MENU2_ITEM5 = Makineli Tüfekler
 
 MENU_NEXT = Sonraki
 MENU_BACK = Geri

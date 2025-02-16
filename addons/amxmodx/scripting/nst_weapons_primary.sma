@@ -212,12 +212,12 @@ public plugin_precache() {
 }
 
 public plugin_startup() {
-    new primaryFile[128] = { "addons/amxmodx/configs/nst_weapons/nst_primary.ini" }
+    new primaryFile[128] = { "addons/amxmodx/configs/weapons/primary.ini" }
     IsConfigBroken = !file_exists(primaryFile)
 
     if (IsConfigBroken) {
         new log[256]
-        formatex(log[0], charsmax(log) - 0, "%L", LANG_PLAYER, "FILE_NOT_LOADED", "../nst_weapons/nst_primary.ini")
+        formatex(log[0], charsmax(log) - 0, "%L", LANG_PLAYER, "FILE_NOT_LOADED", "../weapons/primary.ini")
         server_print("[NST Weapons] %s", log)
         return
     }
@@ -233,7 +233,7 @@ public plugin_startup() {
 
     if (IsConfigBroken) {
         new log[256]
-        formatex(log[0], charsmax(log) - 0, "%L", LANG_PLAYER, "BROKEN_CONFIG", "../nst_weapons/nst_primary.ini", exceptionLine)
+        formatex(log[0], charsmax(log) - 0, "%L", LANG_PLAYER, "BROKEN_CONFIG", "../weapons/primary.ini", exceptionLine)
         server_print("[NST Weapons] %s", log)
         return
     }
@@ -261,7 +261,7 @@ ReadConfig() {
     new buffer[256]
     new left_comment[256], right_comment[256], left_s_comment[256], right_s_comment[256]
 
-    new primaryFile = fopen("addons/amxmodx/configs/nst_weapons/nst_primary.ini", "r")
+    new primaryFile = fopen("addons/amxmodx/configs/weapons/primary.ini", "r")
     while (!feof(primaryFile)) {
         fgets(primaryFile, buffer, charsmax(buffer))
 

@@ -75,8 +75,8 @@ public plugin_init() {
     register_plugin(PLUGIN, VERSION, AUTHOR)
     register_dictionary("nst_weapons.txt")
     register_concmd("nst_secondary_rebuy", "ReBuy_Weapon")
-    register_clcmd("nst_menu_type1", "NST_Secondary")
 
+    register_clcmd("nst_menu_type1", "NST_Secondary")
     register_clcmd("nst_secondary_buy", "NST_Buy_Convar")
 
     register_event("HLTV", "Event_NewRound", "a", "1=0", "2=0")
@@ -192,12 +192,12 @@ public plugin_precache() {
 }
 
 public plugin_startup() {
-    new secondaryFile[128] = { "addons/amxmodx/configs/nst_weapons/nst_secondary.ini" }
+    new secondaryFile[128] = { "addons/amxmodx/configs/weapons/secondary.ini" }
     IsConfigBroken = !file_exists(secondaryFile)
 
     if (IsConfigBroken) {
         new log[256]
-        formatex(log[0], charsmax(log) - 0, "%L", LANG_PLAYER, "FILE_NOT_LOADED", "../nst_weapons/nst_secondary.ini")
+        formatex(log[0], charsmax(log) - 0, "%L", LANG_PLAYER, "FILE_NOT_LOADED", "../weapons/secondary.ini")
         server_print("[NST Weapons] %s", log)
         return
     }
@@ -213,7 +213,7 @@ public plugin_startup() {
 
     if (IsConfigBroken) {
         new log[256]
-        formatex(log[0], charsmax(log) - 0, "%L", LANG_PLAYER, "BROKEN_CONFIG", "../nst_weapons/nst_secondary.ini", exceptionLine)
+        formatex(log[0], charsmax(log) - 0, "%L", LANG_PLAYER, "BROKEN_CONFIG", "../weapons/secondary.ini", exceptionLine)
         server_print("[NST Weapons] %s", log)
         return
     }
@@ -241,7 +241,7 @@ ReadConfig() {
     new buffer[256]
     new left_comment[256], right_comment[256], left_s_comment[256], right_s_comment[256]
 
-    new secondaryFile = fopen("addons/amxmodx/configs/nst_weapons/nst_secondary.ini", "r")
+    new secondaryFile = fopen("addons/amxmodx/configs/weapons/secondary.ini", "r")
     while (!feof(secondaryFile)) {
         fgets(secondaryFile, buffer, charsmax(buffer))
 

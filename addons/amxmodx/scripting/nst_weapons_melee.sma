@@ -152,12 +152,12 @@ public plugin_precache() {
 }
 
 public plugin_startup() {
-    new knifesFile[128] = { "addons/amxmodx/configs/nst_weapons/nst_melee.ini" }
+    new knifesFile[128] = { "addons/amxmodx/configs/weapons/melee.ini" }
     IsConfigBroken = !file_exists(knifesFile)
 
     if (IsConfigBroken) {
         new log[256]
-        formatex(log[0], charsmax(log) - 0, "%L", LANG_PLAYER, "FILE_NOT_LOADED", "../nst_weapons/nst_melee.ini")
+        formatex(log[0], charsmax(log) - 0, "%L", LANG_PLAYER, "FILE_NOT_LOADED", "../weapons/melee.ini")
         server_print("[NST Weapons] %s", log)
         return
     }
@@ -173,7 +173,7 @@ public plugin_startup() {
 
     if (IsConfigBroken) {
         new log[256]
-        formatex(log[0], charsmax(log) - 0, "%L", LANG_PLAYER, "BROKEN_CONFIG", "../nst_weapons/nst_melee.ini", exceptionLine)
+        formatex(log[0], charsmax(log) - 0, "%L", LANG_PLAYER, "BROKEN_CONFIG", "../weapons/melee.ini", exceptionLine)
         server_print("[NST Weapons] %s", log)
         return
     }
@@ -201,7 +201,7 @@ ReadConfig() {
     new buffer[256]
     new left_comment[256], right_comment[256], left_s_comment[256], right_s_comment[256]
 
-    new knifesFile = fopen("addons/amxmodx/configs/nst_weapons/nst_melee.ini", "r")
+    new knifesFile = fopen("addons/amxmodx/configs/weapons/melee.ini", "r")
     while (!feof(knifesFile)) {
         fgets(knifesFile, buffer, charsmax(buffer))
 
